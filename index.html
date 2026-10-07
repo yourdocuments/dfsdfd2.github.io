@@ -7,14 +7,9 @@
 <title>WebsiteDeals.com — Buy Ready-Made Websites</title>
 
 <meta name="description"
-content="WebsiteDeals.com — Buy ready-made websites and launch your business faster.">
+content="WebsiteDeals.com — Buy ready-made websites and launch faster.">
 
 <style>
-/* =========================================================
-   WebsiteDeals.com
-   Premium Category Marketplace
-   ========================================================= */
-
 *{
     margin:0;
     padding:0;
@@ -30,7 +25,8 @@ content="WebsiteDeals.com — Buy ready-made websites and launch your business f
     --bg:#f7f9fc;
     --white:#ffffff;
     --soft:#eff6ff;
-    --shadow:0 10px 35px rgba(15,23,42,.07);
+    --green:#16a34a;
+    --shadow:0 12px 35px rgba(15,23,42,.08);
 }
 
 html{
@@ -59,20 +55,21 @@ body{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.94);
+    background:rgba(255,255,255,.95);
     backdrop-filter:blur(18px);
     border-bottom:1px solid var(--border);
 }
 
 .navbar{
     max-width:1500px;
-    margin:auto;
     height:76px;
+    margin:auto;
     padding:0 28px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:25px;
+    gap:20px;
 }
 
 .logo{
@@ -91,12 +88,12 @@ body{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:7px;
+    gap:5px;
 }
 
 .nav-links a{
-    text-decoration:none;
     color:#475569;
+    text-decoration:none;
     font-size:14px;
     font-weight:700;
     padding:10px 13px;
@@ -112,21 +109,21 @@ body{
 .nav-actions{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:8px;
 }
 
 .login-btn{
-    text-decoration:none;
     color:var(--text);
+    text-decoration:none;
     font-size:14px;
     font-weight:800;
     padding:10px 14px;
 }
 
 .sell-btn{
-    text-decoration:none;
     color:#fff;
     background:var(--primary);
+    text-decoration:none;
     padding:11px 17px;
     border-radius:11px;
     font-size:14px;
@@ -155,13 +152,17 @@ body{
     display:inline-flex;
     align-items:center;
     gap:7px;
+
     padding:7px 13px;
+
+    background:var(--soft);
     border:1px solid #dbeafe;
-    background:#eff6ff;
-    color:#1d4ed8;
     border-radius:999px;
+
+    color:#1d4ed8;
     font-size:12px;
     font-weight:800;
+
     margin-bottom:20px;
 }
 
@@ -173,7 +174,7 @@ body{
 }
 
 .hero h1{
-    font-size:clamp(34px,5vw,62px);
+    font-size:clamp(36px,5vw,62px);
     line-height:1.04;
     letter-spacing:-2.5px;
     font-weight:950;
@@ -207,33 +208,40 @@ body{
     top:50%;
     transform:translateY(-50%);
     color:#94a3b8;
-    font-size:19px;
+    font-size:20px;
     pointer-events:none;
 }
 
 .search-input{
     width:100%;
     height:58px;
-    border:1px solid #dbe2ea;
-    background:#fff;
-    border-radius:15px;
+
     padding:0 20px 0 50px;
+
+    border:1px solid #dbe2ea;
+    border-radius:15px;
+
+    background:#fff;
+    color:var(--text);
+
     outline:none;
     font-size:15px;
-    color:var(--text);
+
     box-shadow:0 10px 35px rgba(15,23,42,.06);
+
     transition:.2s ease;
 }
 
 .search-input:focus{
     border-color:#93c5fd;
+
     box-shadow:
         0 0 0 4px rgba(37,99,235,.08),
         0 12px 35px rgba(15,23,42,.08);
 }
 
 /* =========================================================
-   CATEGORY AREA
+   CATEGORY SECTION
    ========================================================= */
 
 .categories-section{
@@ -247,6 +255,7 @@ body{
     align-items:flex-end;
     justify-content:space-between;
     gap:20px;
+
     margin-bottom:22px;
 }
 
@@ -265,7 +274,6 @@ body{
     color:#64748b;
     font-size:13px;
     font-weight:700;
-    white-space:nowrap;
 }
 
 /* =========================================================
@@ -284,59 +292,83 @@ body{
 
 .category-card{
     position:relative;
+
     background:var(--white);
     border:1px solid var(--border);
     border-radius:17px;
+
     padding:20px;
-    min-height:310px;
+    min-height:330px;
+
     box-shadow:0 4px 18px rgba(15,23,42,.025);
+
     transition:
         transform .22s ease,
         box-shadow .22s ease,
         border-color .22s ease;
+
     overflow:hidden;
 }
 
 .category-card::after{
     content:"";
+
     position:absolute;
-    width:100px;
-    height:100px;
-    right:-50px;
-    top:-50px;
+
+    width:110px;
+    height:110px;
+
+    right:-55px;
+    top:-55px;
+
     background:var(--soft);
     border-radius:50%;
-    opacity:.7;
+
+    opacity:.75;
+
     transition:.25s ease;
 }
 
 .category-card:hover{
     transform:translateY(-5px);
+
     border-color:#bfdbfe;
+
     box-shadow:var(--shadow);
 }
 
 .category-card:hover::after{
-    transform:scale(1.3);
+    transform:scale(1.35);
 }
+
+/* =========================================================
+   CATEGORY HEADER
+   ========================================================= */
 
 .category-top{
     position:relative;
-    z-index:2;
+    z-index:3;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:10px;
-    margin-bottom:16px;
+
+    margin-bottom:15px;
 }
 
 .category-icon{
     width:43px;
     height:43px;
+
     display:grid;
     place-items:center;
+
     border-radius:12px;
-    background:#eff6ff;
+
+    background:var(--soft);
+
     font-size:21px;
 }
 
@@ -349,45 +381,178 @@ body{
 
 .category-title{
     position:relative;
-    z-index:2;
+    z-index:3;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:8px;
+
     font-size:16px;
     font-weight:900;
-    margin-bottom:12px;
-    letter-spacing:-.2px;
+
+    margin-bottom:11px;
 }
+
+/* =========================================================
+   COPY BUTTON
+   ========================================================= */
+
+.copy-btn{
+    position:relative;
+    z-index:10;
+
+    flex-shrink:0;
+
+    width:31px;
+    height:31px;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid #dbe3ee;
+    border-radius:9px;
+
+    background:#fff;
+
+    color:#64748b;
+
+    cursor:pointer;
+
+    transition:
+        background .18s ease,
+        color .18s ease,
+        border-color .18s ease,
+        transform .18s ease;
+}
+
+.copy-btn:hover{
+    color:var(--primary);
+    border-color:#bfdbfe;
+    background:var(--soft);
+
+    transform:translateY(-1px);
+}
+
+.copy-btn:active{
+    transform:scale(.94);
+}
+
+.copy-btn svg{
+    width:15px;
+    height:15px;
+}
+
+/* Copied State */
+
+.copy-btn.copied{
+    background:#f0fdf4;
+    color:var(--green);
+    border-color:#bbf7d0;
+}
+
+/* =========================================================
+   CATEGORY LIST
+   ========================================================= */
 
 .category-list{
     position:relative;
-    z-index:2;
+    z-index:3;
+
     list-style:none;
 }
 
 .category-list li{
-    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:6px;
 }
 
-.category-list a{
+.category-name{
     display:block;
-    text-decoration:none;
+
+    flex:1;
+
     color:#64748b;
+
     font-size:13px;
+
     padding:5px 0;
+
+    cursor:text;
+
+    user-select:text;
+
     transition:.18s ease;
 }
 
-.category-list a:hover{
+.category-name:hover{
     color:var(--primary);
-    transform:translateX(3px);
 }
+
+/* Small copy button for list items */
+
+.item-copy{
+    width:25px;
+    height:25px;
+
+    border:0;
+
+    background:transparent;
+
+    color:#cbd5e1;
+
+    border-radius:7px;
+
+    display:grid;
+    place-items:center;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transition:.18s ease;
+}
+
+.category-list li:hover .item-copy{
+    opacity:1;
+}
+
+.item-copy:hover{
+    color:var(--primary);
+    background:var(--soft);
+}
+
+.item-copy.copied{
+    opacity:1;
+    color:var(--green);
+    background:#f0fdf4;
+}
+
+.item-copy svg{
+    width:13px;
+    height:13px;
+}
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
 
 .view-all{
     position:absolute;
-    z-index:3;
+    z-index:5;
+
     left:20px;
     bottom:17px;
+
     color:var(--primary);
+
     font-size:12px;
     font-weight:900;
+
     text-decoration:none;
 }
 
@@ -396,20 +561,88 @@ body{
 }
 
 /* =========================================================
-   EMPTY SEARCH
+   COPY TOAST
+   ========================================================= */
+
+.copy-toast{
+    position:fixed;
+
+    left:50%;
+    bottom:30px;
+
+    z-index:9999;
+
+    transform:
+        translate(-50%,20px)
+        scale(.96);
+
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    padding:12px 17px;
+
+    background:#111827;
+    color:#fff;
+
+    border-radius:12px;
+
+    font-size:13px;
+    font-weight:800;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:
+        opacity .22s ease,
+        transform .22s ease;
+}
+
+.copy-toast.show{
+    opacity:1;
+
+    transform:
+        translate(-50%,0)
+        scale(1);
+}
+
+.toast-check{
+    width:20px;
+    height:20px;
+
+    display:grid;
+    place-items:center;
+
+    background:#22c55e;
+
+    border-radius:50%;
+
+    font-size:12px;
+}
+
+/* =========================================================
+   NO RESULTS
    ========================================================= */
 
 .no-results{
     display:none;
+
     text-align:center;
+
     padding:60px 20px;
+
     color:var(--muted);
 }
 
 .no-results strong{
     display:block;
+
     color:var(--text);
+
     font-size:18px;
+
     margin-bottom:6px;
 }
 
@@ -419,23 +652,30 @@ body{
 
 .footer{
     background:#0f172a;
+
     color:#cbd5e1;
+
     padding:45px 28px;
 }
 
 .footer-inner{
     max-width:1500px;
+
     margin:auto;
+
     display:flex;
-    justify-content:space-between;
-    gap:30px;
+
     align-items:center;
+    justify-content:space-between;
+
+    gap:30px;
 }
 
 .footer-logo{
     color:#fff;
-    font-weight:900;
+
     font-size:20px;
+    font-weight:900;
 }
 
 .footer-logo span{
@@ -443,8 +683,10 @@ body{
 }
 
 .footer p{
-    font-size:13px;
     color:#94a3b8;
+
+    font-size:13px;
+
     margin-top:5px;
 }
 
@@ -456,7 +698,9 @@ body{
 
 .footer-links a{
     color:#cbd5e1;
+
     text-decoration:none;
+
     font-size:13px;
 }
 
@@ -479,10 +723,6 @@ body{
     }
 }
 
-/* =========================================================
-   TABLET SMALL
-   ========================================================= */
-
 @media(max-width:900px){
 
     .category-grid{
@@ -493,12 +733,12 @@ body{
         padding:0 20px;
     }
 
-    .categories-section{
+    .hero{
         padding-left:20px;
         padding-right:20px;
     }
 
-    .hero{
+    .categories-section{
         padding-left:20px;
         padding-right:20px;
     }
@@ -559,7 +799,7 @@ body{
     }
 
     .category-card{
-        min-height:290px;
+        min-height:310px;
         padding:16px;
         border-radius:14px;
     }
@@ -568,8 +808,12 @@ body{
         font-size:14px;
     }
 
-    .category-list a{
+    .category-name{
         font-size:12px;
+    }
+
+    .item-copy{
+        opacity:1;
     }
 
     .view-all{
@@ -607,26 +851,26 @@ body{
 
 <header class="header">
 
-    <nav class="navbar">
+<nav class="navbar">
 
-        <a href="#" class="logo">
-            Website<span>Deals</span>.com
-        </a>
+    <a href="#" class="logo">
+        Website<span>Deals</span>.com
+    </a>
 
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#categories">All Websites</a>
-            <a href="#categories">Categories</a>
-            <a href="#">New Arrivals</a>
-            <a href="#">Deals</a>
-        </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#categories">All Websites</a>
+        <a href="#categories">Categories</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Deals</a>
+    </div>
 
-        <div class="nav-actions">
-            <a href="#" class="login-btn">Login</a>
-            <a href="#" class="sell-btn">Sell Your Website</a>
-        </div>
+    <div class="nav-actions">
+        <a href="#" class="login-btn">Login</a>
+        <a href="#" class="sell-btn">Sell Your Website</a>
+    </div>
 
-    </nav>
+</nav>
 
 </header>
 
@@ -679,7 +923,9 @@ body{
 
         <div>
             <h2>Browse by Category</h2>
-            <p>Choose a category and discover ready-made websites.</p>
+            <p>
+                Click the copy icon to quickly copy any category name.
+            </p>
         </div>
 
         <div class="result-count" id="resultCount">
@@ -692,378 +938,956 @@ body{
     <div class="category-grid" id="categoryGrid">
 
 
-        <!-- 01 -->
-        <article class="category-card" data-search="business corporate company profile startup agency marketing it technology saas ai web development">
-
-            <div class="category-top">
-                <div class="category-icon">💼</div>
-                <div class="category-number">01–10</div>
-            </div>
-
-            <h3 class="category-title">Business & Corporate</h3>
-
-            <ul class="category-list">
-                <li><a href="#">Business & Corporate</a></li>
-                <li><a href="#">Company Profile</a></li>
-                <li><a href="#">Startup</a></li>
-                <li><a href="#">Agency</a></li>
-                <li><a href="#">Digital Marketing Agency</a></li>
-                <li><a href="#">IT & Software</a></li>
-                <li><a href="#">Technology</a></li>
-                <li><a href="#">SaaS</a></li>
-                <li><a href="#">AI & Machine Learning</a></li>
-                <li><a href="#">Web Development</a></li>
-            </ul>
+<!-- =====================================================
+     CARD 01
+     ===================================================== -->
+
+<article class="category-card"
+data-search="business corporate company profile startup agency marketing it technology saas ai web development">
+
+    <div class="category-top">
+        <div class="category-icon">💼</div>
+        <div class="category-number">01–10</div>
+    </div>
+
+    <h3 class="category-title">
+        Business & Corporate
+
+        <button
+            class="copy-btn"
+            data-copy="Business & Corporate"
+            aria-label="Copy Business & Corporate">
+
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li>
+            <span class="category-name">Business & Corporate</span>
+            <button class="item-copy" data-copy="Business & Corporate">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">Company Profile</span>
+            <button class="item-copy" data-copy="Company Profile">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">Startup</span>
+            <button class="item-copy" data-copy="Startup">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">Agency</span>
+            <button class="item-copy" data-copy="Agency">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">Digital Marketing Agency</span>
+            <button class="item-copy" data-copy="Digital Marketing Agency">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">IT & Software</span>
+            <button class="item-copy" data-copy="IT & Software">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">Technology</span>
+            <button class="item-copy" data-copy="Technology">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">SaaS</span>
+            <button class="item-copy" data-copy="SaaS">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">AI & Machine Learning</span>
+            <button class="item-copy" data-copy="AI & Machine Learning">
+                📋
+            </button>
+        </li>
+
+        <li>
+            <span class="category-name">Web Development</span>
+            <button class="item-copy" data-copy="Web Development">
+                📋
+            </button>
+        </li>
+
+    </ul>
 
-            <a href="#" class="view-all">View All →</a>
+    <a href="#" class="view-all">View All →</a>
 
-        </article>
-
-
-        <!-- 02 -->
-        <article class="category-card" data-search="ecommerce online store fashion clothing shoes jewelry cosmetics electronics grocery furniture">
-
-            <div class="category-top">
-                <div class="category-icon">🛒</div>
-                <div class="category-number">11–20</div>
-            </div>
-
-            <h3 class="category-title">E-commerce</h3>
-
-            <ul class="category-list">
-                <li><a href="#">E-commerce</a></li>
-                <li><a href="#">Online Store</a></li>
-                <li><a href="#">Fashion Store</a></li>
-                <li><a href="#">Clothing Store</a></li>
-                <li><a href="#">Shoes Store</a></li>
-                <li><a href="#">Jewelry Store</a></li>
-                <li><a href="#">Cosmetics Store</a></li>
-                <li><a href="#">Electronics Store</a></li>
-                <li><a href="#">Grocery Store</a></li>
-                <li><a href="#">Furniture Store</a></li>
-            </ul>
+</article>
 
-            <a href="#" class="view-all">View All →</a>
 
-        </article>
-
-
-        <!-- 03 -->
-        <article class="category-card" data-search="restaurant cafe bakery food delivery catering cloud kitchen hotel resort travel tourism tour package">
-
-            <div class="category-top">
-                <div class="category-icon">🍔</div>
-                <div class="category-number">21–31</div>
-            </div>
-
-            <h3 class="category-title">Food & Travel</h3>
-
-            <ul class="category-list">
-                <li><a href="#">Restaurant</a></li>
-                <li><a href="#">Cafe</a></li>
-                <li><a href="#">Bakery</a></li>
-                <li><a href="#">Food Delivery</a></li>
-                <li><a href="#">Catering</a></li>
-                <li><a href="#">Cloud Kitchen</a></li>
-                <li><a href="#">Hotel</a></li>
-                <li><a href="#">Resort</a></li>
-                <li><a href="#">Travel Agency</a></li>
-                <li><a href="#">Tourism</a></li>
-                <li><a href="#">Tour Package</a></li>
-            </ul>
+<!-- =====================================================
+     CARD 02
+     ===================================================== -->
 
-            <a href="#" class="view-all">View All →</a>
-
-        </article>
-
-
-        <!-- 04 -->
-        <article class="category-card" data-search="real estate property listing rental construction architecture interior engineering manufacturing industrial">
-
-            <div class="category-top">
-                <div class="category-icon">🏠</div>
-                <div class="category-number">32–40</div>
-            </div>
-
-            <h3 class="category-title">Property & Construction</h3>
+<article class="category-card"
+data-search="ecommerce online store fashion clothing shoes jewelry cosmetics electronics grocery furniture">
 
-            <ul class="category-list">
-                <li><a href="#">Real Estate</a></li>
-                <li><a href="#">Property Listing</a></li>
-                <li><a href="#">Property Rental</a></li>
-                <li><a href="#">Construction</a></li>
-                <li><a href="#">Architecture</a></li>
-                <li><a href="#">Interior Design</a></li>
-                <li><a href="#">Engineering</a></li>
-                <li><a href="#">Manufacturing</a></li>
-                <li><a href="#">Industrial</a></li>
-            </ul>
+    <div class="category-top">
+        <div class="category-icon">🛒</div>
+        <div class="category-number">11–20</div>
+    </div>
 
-            <a href="#" class="view-all">View All →</a>
+    <h3 class="category-title">
+        E-commerce
 
-        </article>
+        <button class="copy-btn" data-copy="E-commerce"
+        aria-label="Copy E-commerce">
 
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
 
-        <!-- 05 -->
-        <article class="category-card" data-search="doctor clinic hospital dental pharmacy diagnostic health wellness fitness gym yoga beauty salon">
-
-            <div class="category-top">
-                <div class="category-icon">❤️</div>
-                <div class="category-number">41–50</div>
-            </div>
-
-            <h3 class="category-title">Health & Wellness</h3>
-
-            <ul class="category-list">
-                <li><a href="#">Doctor</a></li>
-                <li><a href="#">Clinic</a></li>
-                <li><a href="#">Hospital</a></li>
-                <li><a href="#">Dental Clinic</a></li>
-                <li><a href="#">Pharmacy</a></li>
-                <li><a href="#">Diagnostic Center</a></li>
-                <li><a href="#">Health & Wellness</a></li>
-                <li><a href="#">Fitness & Gym</a></li>
-                <li><a href="#">Yoga</a></li>
-                <li><a href="#">Beauty & Salon</a></li>
-            </ul>
+        </button>
+    </h3>
 
-            <a href="#" class="view-all">View All →</a>
+    <ul class="category-list">
 
-        </article>
+        <li><span class="category-name">E-commerce</span>
+            <button class="item-copy" data-copy="E-commerce">📋</button>
+        </li>
 
+        <li><span class="category-name">Online Store</span>
+            <button class="item-copy" data-copy="Online Store">📋</button>
+        </li>
 
-        <!-- 06 -->
-        <article class="category-card" data-search="education school college coaching training institute online course lms tutor teacher learning">
+        <li><span class="category-name">Fashion Store</span>
+            <button class="item-copy" data-copy="Fashion Store">📋</button>
+        </li>
 
-            <div class="category-top">
-                <div class="category-icon">🎓</div>
-                <div class="category-number">51–60</div>
-            </div>
+        <li><span class="category-name">Clothing Store</span>
+            <button class="item-copy" data-copy="Clothing Store">📋</button>
+        </li>
 
-            <h3 class="category-title">Education</h3>
+        <li><span class="category-name">Shoes Store</span>
+            <button class="item-copy" data-copy="Shoes Store">📋</button>
+        </li>
 
-            <ul class="category-list">
-                <li><a href="#">Education</a></li>
-                <li><a href="#">School</a></li>
-                <li><a href="#">College</a></li>
-                <li><a href="#">Coaching Center</a></li>
-                <li><a href="#">Training Institute</a></li>
-                <li><a href="#">Online Course</a></li>
-                <li><a href="#">LMS</a></li>
-                <li><a href="#">Tutor</a></li>
-                <li><a href="#">Teacher</a></li>
-                <li><a href="#">Learning</a></li>
-            </ul>
+        <li><span class="category-name">Jewelry Store</span>
+            <button class="item-copy" data-copy="Jewelry Store">📋</button>
+        </li>
 
-            <a href="#" class="view-all">View All →</a>
+        <li><span class="category-name">Cosmetics Store</span>
+            <button class="item-copy" data-copy="Cosmetics Store">📋</button>
+        </li>
 
-        </article>
+        <li><span class="category-name">Electronics Store</span>
+            <button class="item-copy" data-copy="Electronics Store">📋</button>
+        </li>
 
+        <li><span class="category-name">Grocery Store</span>
+            <button class="item-copy" data-copy="Grocery Store">📋</button>
+        </li>
 
-        <!-- 07 -->
-        <article class="category-card" data-search="portfolio personal freelancer resume cv designer developer photographer creative studio">
+        <li><span class="category-name">Furniture Store</span>
+            <button class="item-copy" data-copy="Furniture Store">📋</button>
+        </li>
 
-            <div class="category-top">
-                <div class="category-icon">🎨</div>
-                <div class="category-number">61–68</div>
-            </div>
+    </ul>
 
-            <h3 class="category-title">Portfolio & Creative</h3>
+    <a href="#" class="view-all">View All →</a>
 
-            <ul class="category-list">
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Personal Website</a></li>
-                <li><a href="#">Freelancer</a></li>
-                <li><a href="#">Resume & CV</a></li>
-                <li><a href="#">Designer Portfolio</a></li>
-                <li><a href="#">Developer Portfolio</a></li>
-                <li><a href="#">Photographer</a></li>
-                <li><a href="#">Creative Studio</a></li>
-            </ul>
+</article>
 
-            <a href="#" class="view-all">View All →</a>
 
-        </article>
+<!-- =====================================================
+     CARD 03
+     ===================================================== -->
 
+<article class="category-card"
+data-search="restaurant cafe bakery food delivery catering cloud kitchen hotel resort travel tourism tour package">
 
-        <!-- 08 -->
-        <article class="category-card" data-search="blog news magazine tech fashion entertainment music gaming events wedding photography ticket">
+    <div class="category-top">
+        <div class="category-icon">🍔</div>
+        <div class="category-number">21–31</div>
+    </div>
 
-            <div class="category-top">
-                <div class="category-icon">🎬</div>
-                <div class="category-number">69–79</div>
-            </div>
+    <h3 class="category-title">
+        Food & Travel
 
-            <h3 class="category-title">Entertainment & Media</h3>
+        <button class="copy-btn" data-copy="Food & Travel"
+        aria-label="Copy Food & Travel">
 
-            <ul class="category-list">
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">News & Magazine</a></li>
-                <li><a href="#">Tech Blog</a></li>
-                <li><a href="#">Fashion Blog</a></li>
-                <li><a href="#">Entertainment</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">Gaming</a></li>
-                <li><a href="#">Event Management</a></li>
-                <li><a href="#">Wedding</a></li>
-                <li><a href="#">Photography</a></li>
-                <li><a href="#">Ticket Booking</a></li>
-            </ul>
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
 
-            <a href="#" class="view-all">View All →</a>
+        </button>
+    </h3>
 
-        </article>
+    <ul class="category-list">
 
+        <li><span class="category-name">Restaurant</span>
+            <button class="item-copy" data-copy="Restaurant">📋</button>
+        </li>
 
-        <!-- 09 -->
-        <article class="category-card" data-search="automotive car dealer car rental auto repair bike shop">
+        <li><span class="category-name">Cafe</span>
+            <button class="item-copy" data-copy="Cafe">📋</button>
+        </li>
 
-            <div class="category-top">
-                <div class="category-icon">🚗</div>
-                <div class="category-number">80–84</div>
-            </div>
+        <li><span class="category-name">Bakery</span>
+            <button class="item-copy" data-copy="Bakery">📋</button>
+        </li>
 
-            <h3 class="category-title">Automotive</h3>
+        <li><span class="category-name">Food Delivery</span>
+            <button class="item-copy" data-copy="Food Delivery">📋</button>
+        </li>
 
-            <ul class="category-list">
-                <li><a href="#">Automotive</a></li>
-                <li><a href="#">Car Dealer</a></li>
-                <li><a href="#">Car Rental</a></li>
-                <li><a href="#">Auto Repair</a></li>
-                <li><a href="#">Bike Shop</a></li>
-            </ul>
+        <li><span class="category-name">Catering</span>
+            <button class="item-copy" data-copy="Catering">📋</button>
+        </li>
 
-            <a href="#" class="view-all">View All →</a>
+        <li><span class="category-name">Cloud Kitchen</span>
+            <button class="item-copy" data-copy="Cloud Kitchen">📋</button>
+        </li>
 
-        </article>
+        <li><span class="category-name">Hotel</span>
+            <button class="item-copy" data-copy="Hotel">📋</button>
+        </li>
 
+        <li><span class="category-name">Resort</span>
+            <button class="item-copy" data-copy="Resort">📋</button>
+        </li>
 
-        <!-- 10 -->
-        <article class="category-card" data-search="finance accounting insurance investment consulting law firm legal services">
+        <li><span class="category-name">Travel Agency</span>
+            <button class="item-copy" data-copy="Travel Agency">📋</button>
+        </li>
 
-            <div class="category-top">
-                <div class="category-icon">💳</div>
-                <div class="category-number">85–90</div>
-            </div>
+        <li><span class="category-name">Tourism</span>
+            <button class="item-copy" data-copy="Tourism">📋</button>
+        </li>
 
-            <h3 class="category-title">Finance & Professional</h3>
+        <li><span class="category-name">Tour Package</span>
+            <button class="item-copy" data-copy="Tour Package">📋</button>
+        </li>
 
-            <ul class="category-list">
-                <li><a href="#">Finance & Accounting</a></li>
-                <li><a href="#">Insurance</a></li>
-                <li><a href="#">Investment</a></li>
-                <li><a href="#">Business Consulting</a></li>
-                <li><a href="#">Law Firm</a></li>
-                <li><a href="#">Legal Services</a></li>
-            </ul>
+    </ul>
 
-            <a href="#" class="view-all">View All →</a>
+    <a href="#" class="view-all">View All →</a>
 
-        </article>
+</article>
 
 
-        <!-- 11 -->
-        <article class="category-card" data-search="job career job portal classified ads directory listing">
+<!-- =====================================================
+     CARD 04
+     ===================================================== -->
 
-            <div class="category-top">
-                <div class="category-icon">🛠️</div>
-                <div class="category-number">91–94</div>
-            </div>
+<article class="category-card"
+data-search="real estate property listing rental construction architecture interior engineering manufacturing industrial">
 
-            <h3 class="category-title">Jobs & Directory</h3>
+    <div class="category-top">
+        <div class="category-icon">🏠</div>
+        <div class="category-number">32–40</div>
+    </div>
 
-            <ul class="category-list">
-                <li><a href="#">Job & Career</a></li>
-                <li><a href="#">Job Portal</a></li>
-                <li><a href="#">Classified Ads</a></li>
-                <li><a href="#">Directory & Listing</a></li>
-            </ul>
+    <h3 class="category-title">
+        Property & Construction
 
-            <a href="#" class="view-all">View All →</a>
+        <button class="copy-btn" data-copy="Property & Construction">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
 
-        </article>
+    <ul class="category-list">
 
+        <li><span class="category-name">Real Estate</span>
+            <button class="item-copy" data-copy="Real Estate">📋</button>
+        </li>
 
-        <!-- 12 -->
-        <article class="category-card" data-search="marketplace booking reservation">
+        <li><span class="category-name">Property Listing</span>
+            <button class="item-copy" data-copy="Property Listing">📋</button>
+        </li>
 
-            <div class="category-top">
-                <div class="category-icon">🛍️</div>
-                <div class="category-number">95–96</div>
-            </div>
+        <li><span class="category-name">Property Rental</span>
+            <button class="item-copy" data-copy="Property Rental">📋</button>
+        </li>
 
-            <h3 class="category-title">Marketplace & Booking</h3>
+        <li><span class="category-name">Construction</span>
+            <button class="item-copy" data-copy="Construction">📋</button>
+        </li>
 
-            <ul class="category-list">
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Booking & Reservation</a></li>
-            </ul>
+        <li><span class="category-name">Architecture</span>
+            <button class="item-copy" data-copy="Architecture">📋</button>
+        </li>
 
-            <a href="#" class="view-all">View All →</a>
+        <li><span class="category-name">Interior Design</span>
+            <button class="item-copy" data-copy="Interior Design">📋</button>
+        </li>
 
-        </article>
+        <li><span class="category-name">Engineering</span>
+            <button class="item-copy" data-copy="Engineering">📋</button>
+        </li>
 
+        <li><span class="category-name">Manufacturing</span>
+            <button class="item-copy" data-copy="Manufacturing">📋</button>
+        </li>
 
-        <!-- 13 -->
-        <article class="category-card" data-search="ngo charity community organization">
+        <li><span class="category-name">Industrial</span>
+            <button class="item-copy" data-copy="Industrial">📋</button>
+        </li>
 
-            <div class="category-top">
-                <div class="category-icon">🌍</div>
-                <div class="category-number">97–98</div>
-            </div>
+    </ul>
 
-            <h3 class="category-title">Community</h3>
+    <a href="#" class="view-all">View All →</a>
 
-            <ul class="category-list">
-                <li><a href="#">NGO & Charity</a></li>
-                <li><a href="#">Community & Organization</a></li>
-            </ul>
+</article>
 
-            <a href="#" class="view-all">View All →</a>
 
-        </article>
+<!-- =====================================================
+     CARD 05
+     ===================================================== -->
 
+<article class="category-card"
+data-search="doctor clinic hospital dental pharmacy diagnostic health wellness fitness gym yoga beauty salon">
 
-        <!-- 14 -->
-        <article class="category-card" data-search="landing page custom website special project">
+    <div class="category-top">
+        <div class="category-icon">❤️</div>
+        <div class="category-number">41–50</div>
+    </div>
 
-            <div class="category-top">
-                <div class="category-icon">🚀</div>
-                <div class="category-number">99</div>
-            </div>
+    <h3 class="category-title">
+        Health & Wellness
 
-            <h3 class="category-title">Landing & Custom</h3>
+        <button class="copy-btn" data-copy="Health & Wellness">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
 
-            <ul class="category-list">
-                <li><a href="#">Landing Pages</a></li>
-                <li><a href="#">Custom Website</a></li>
-                <li><a href="#">Special Project</a></li>
-            </ul>
+    <ul class="category-list">
 
-            <a href="#" class="view-all">View All →</a>
+        <li><span class="category-name">Doctor</span>
+            <button class="item-copy" data-copy="Doctor">📋</button>
+        </li>
 
-        </article>
+        <li><span class="category-name">Clinic</span>
+            <button class="item-copy" data-copy="Clinic">📋</button>
+        </li>
 
+        <li><span class="category-name">Hospital</span>
+            <button class="item-copy" data-copy="Hospital">📋</button>
+        </li>
 
-        <!-- 15 -->
-        <article class="category-card" data-search="other custom special project">
+        <li><span class="category-name">Dental Clinic</span>
+            <button class="item-copy" data-copy="Dental Clinic">📋</button>
+        </li>
 
-            <div class="category-top">
-                <div class="category-icon">📦</div>
-                <div class="category-number">100</div>
-            </div>
+        <li><span class="category-name">Pharmacy</span>
+            <button class="item-copy" data-copy="Pharmacy">📋</button>
+        </li>
 
-            <h3 class="category-title">Other & Custom</h3>
+        <li><span class="category-name">Diagnostic Center</span>
+            <button class="item-copy" data-copy="Diagnostic Center">📋</button>
+        </li>
 
-            <ul class="category-list">
-                <li><a href="#">Other</a></li>
-                <li><a href="#">Custom Projects</a></li>
-                <li><a href="#">Special Websites</a></li>
-            </ul>
+        <li><span class="category-name">Health & Wellness</span>
+            <button class="item-copy" data-copy="Health & Wellness">📋</button>
+        </li>
 
-            <a href="#" class="view-all">View All →</a>
+        <li><span class="category-name">Fitness & Gym</span>
+            <button class="item-copy" data-copy="Fitness & Gym">📋</button>
+        </li>
 
-        </article>
+        <li><span class="category-name">Yoga</span>
+            <button class="item-copy" data-copy="Yoga">📋</button>
+        </li>
+
+        <li><span class="category-name">Beauty & Salon</span>
+            <button class="item-copy" data-copy="Beauty & Salon">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 06
+     ===================================================== -->
+
+<article class="category-card"
+data-search="education school college coaching training institute online course lms tutor teacher learning">
+
+    <div class="category-top">
+        <div class="category-icon">🎓</div>
+        <div class="category-number">51–60</div>
+    </div>
+
+    <h3 class="category-title">
+        Education
+
+        <button class="copy-btn" data-copy="Education">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Education</span>
+            <button class="item-copy" data-copy="Education">📋</button>
+        </li>
+
+        <li><span class="category-name">School</span>
+            <button class="item-copy" data-copy="School">📋</button>
+        </li>
+
+        <li><span class="category-name">College</span>
+            <button class="item-copy" data-copy="College">📋</button>
+        </li>
+
+        <li><span class="category-name">Coaching Center</span>
+            <button class="item-copy" data-copy="Coaching Center">📋</button>
+        </li>
+
+        <li><span class="category-name">Training Institute</span>
+            <button class="item-copy" data-copy="Training Institute">📋</button>
+        </li>
+
+        <li><span class="category-name">Online Course</span>
+            <button class="item-copy" data-copy="Online Course">📋</button>
+        </li>
+
+        <li><span class="category-name">LMS</span>
+            <button class="item-copy" data-copy="LMS">📋</button>
+        </li>
+
+        <li><span class="category-name">Tutor</span>
+            <button class="item-copy" data-copy="Tutor">📋</button>
+        </li>
+
+        <li><span class="category-name">Teacher</span>
+            <button class="item-copy" data-copy="Teacher">📋</button>
+        </li>
+
+        <li><span class="category-name">Learning</span>
+            <button class="item-copy" data-copy="Learning">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 07
+     ===================================================== -->
+
+<article class="category-card"
+data-search="portfolio personal freelancer resume cv designer developer photographer creative studio">
+
+    <div class="category-top">
+        <div class="category-icon">🎨</div>
+        <div class="category-number">61–68</div>
+    </div>
+
+    <h3 class="category-title">
+        Portfolio & Creative
+
+        <button class="copy-btn" data-copy="Portfolio & Creative">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Portfolio</span>
+            <button class="item-copy" data-copy="Portfolio">📋</button>
+        </li>
+
+        <li><span class="category-name">Personal Website</span>
+            <button class="item-copy" data-copy="Personal Website">📋</button>
+        </li>
+
+        <li><span class="category-name">Freelancer</span>
+            <button class="item-copy" data-copy="Freelancer">📋</button>
+        </li>
+
+        <li><span class="category-name">Resume & CV</span>
+            <button class="item-copy" data-copy="Resume & CV">📋</button>
+        </li>
+
+        <li><span class="category-name">Designer Portfolio</span>
+            <button class="item-copy" data-copy="Designer Portfolio">📋</button>
+        </li>
+
+        <li><span class="category-name">Developer Portfolio</span>
+            <button class="item-copy" data-copy="Developer Portfolio">📋</button>
+        </li>
+
+        <li><span class="category-name">Photographer</span>
+            <button class="item-copy" data-copy="Photographer">📋</button>
+        </li>
+
+        <li><span class="category-name">Creative Studio</span>
+            <button class="item-copy" data-copy="Creative Studio">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 08
+     ===================================================== -->
+
+<article class="category-card"
+data-search="blog news magazine tech fashion entertainment music gaming event wedding photography ticket">
+
+    <div class="category-top">
+        <div class="category-icon">🎬</div>
+        <div class="category-number">69–79</div>
+    </div>
+
+    <h3 class="category-title">
+        Entertainment & Media
+
+        <button class="copy-btn" data-copy="Entertainment & Media">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Blog</span>
+            <button class="item-copy" data-copy="Blog">📋</button>
+        </li>
+
+        <li><span class="category-name">News & Magazine</span>
+            <button class="item-copy" data-copy="News & Magazine">📋</button>
+        </li>
+
+        <li><span class="category-name">Tech Blog</span>
+            <button class="item-copy" data-copy="Tech Blog">📋</button>
+        </li>
+
+        <li><span class="category-name">Fashion Blog</span>
+            <button class="item-copy" data-copy="Fashion Blog">📋</button>
+        </li>
+
+        <li><span class="category-name">Entertainment</span>
+            <button class="item-copy" data-copy="Entertainment">📋</button>
+        </li>
+
+        <li><span class="category-name">Music</span>
+            <button class="item-copy" data-copy="Music">📋</button>
+        </li>
+
+        <li><span class="category-name">Gaming</span>
+            <button class="item-copy" data-copy="Gaming">📋</button>
+        </li>
+
+        <li><span class="category-name">Event Management</span>
+            <button class="item-copy" data-copy="Event Management">📋</button>
+        </li>
+
+        <li><span class="category-name">Wedding</span>
+            <button class="item-copy" data-copy="Wedding">📋</button>
+        </li>
+
+        <li><span class="category-name">Photography</span>
+            <button class="item-copy" data-copy="Photography">📋</button>
+        </li>
+
+        <li><span class="category-name">Ticket Booking</span>
+            <button class="item-copy" data-copy="Ticket Booking">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 09
+     ===================================================== -->
+
+<article class="category-card"
+data-search="automotive car dealer car rental auto repair bike shop">
+
+    <div class="category-top">
+        <div class="category-icon">🚗</div>
+        <div class="category-number">80–84</div>
+    </div>
+
+    <h3 class="category-title">
+        Automotive
+
+        <button class="copy-btn" data-copy="Automotive">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Automotive</span>
+            <button class="item-copy" data-copy="Automotive">📋</button>
+        </li>
+
+        <li><span class="category-name">Car Dealer</span>
+            <button class="item-copy" data-copy="Car Dealer">📋</button>
+        </li>
+
+        <li><span class="category-name">Car Rental</span>
+            <button class="item-copy" data-copy="Car Rental">📋</button>
+        </li>
+
+        <li><span class="category-name">Auto Repair</span>
+            <button class="item-copy" data-copy="Auto Repair">📋</button>
+        </li>
+
+        <li><span class="category-name">Bike Shop</span>
+            <button class="item-copy" data-copy="Bike Shop">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 10
+     ===================================================== -->
+
+<article class="category-card"
+data-search="finance accounting insurance investment consulting law firm legal services">
+
+    <div class="category-top">
+        <div class="category-icon">💳</div>
+        <div class="category-number">85–90</div>
+    </div>
+
+    <h3 class="category-title">
+        Finance & Professional
+
+        <button class="copy-btn" data-copy="Finance & Professional">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Finance & Accounting</span>
+            <button class="item-copy" data-copy="Finance & Accounting">📋</button>
+        </li>
+
+        <li><span class="category-name">Insurance</span>
+            <button class="item-copy" data-copy="Insurance">📋</button>
+        </li>
+
+        <li><span class="category-name">Investment</span>
+            <button class="item-copy" data-copy="Investment">📋</button>
+        </li>
+
+        <li><span class="category-name">Business Consulting</span>
+            <button class="item-copy" data-copy="Business Consulting">📋</button>
+        </li>
+
+        <li><span class="category-name">Law Firm</span>
+            <button class="item-copy" data-copy="Law Firm">📋</button>
+        </li>
+
+        <li><span class="category-name">Legal Services</span>
+            <button class="item-copy" data-copy="Legal Services">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 11
+     ===================================================== -->
+
+<article class="category-card"
+data-search="job career job portal classified ads directory listing">
+
+    <div class="category-top">
+        <div class="category-icon">🛠️</div>
+        <div class="category-number">91–94</div>
+    </div>
+
+    <h3 class="category-title">
+        Jobs & Directory
+
+        <button class="copy-btn" data-copy="Jobs & Directory">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Job & Career</span>
+            <button class="item-copy" data-copy="Job & Career">📋</button>
+        </li>
+
+        <li><span class="category-name">Job Portal</span>
+            <button class="item-copy" data-copy="Job Portal">📋</button>
+        </li>
+
+        <li><span class="category-name">Classified Ads</span>
+            <button class="item-copy" data-copy="Classified Ads">📋</button>
+        </li>
+
+        <li><span class="category-name">Directory & Listing</span>
+            <button class="item-copy" data-copy="Directory & Listing">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 12
+     ===================================================== -->
+
+<article class="category-card"
+data-search="marketplace booking reservation">
+
+    <div class="category-top">
+        <div class="category-icon">🛍️</div>
+        <div class="category-number">95–96</div>
+    </div>
+
+    <h3 class="category-title">
+        Marketplace & Booking
+
+        <button class="copy-btn" data-copy="Marketplace & Booking">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Marketplace</span>
+            <button class="item-copy" data-copy="Marketplace">📋</button>
+        </li>
+
+        <li><span class="category-name">Booking & Reservation</span>
+            <button class="item-copy" data-copy="Booking & Reservation">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 13
+     ===================================================== -->
+
+<article class="category-card"
+data-search="ngo charity community organization">
+
+    <div class="category-top">
+        <div class="category-icon">🌍</div>
+        <div class="category-number">97–98</div>
+    </div>
+
+    <h3 class="category-title">
+        Community
+
+        <button class="copy-btn" data-copy="Community">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">NGO & Charity</span>
+            <button class="item-copy" data-copy="NGO & Charity">📋</button>
+        </li>
+
+        <li><span class="category-name">Community & Organization</span>
+            <button class="item-copy" data-copy="Community & Organization">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 14
+     ===================================================== -->
+
+<article class="category-card"
+data-search="landing pages custom website special project">
+
+    <div class="category-top">
+        <div class="category-icon">🚀</div>
+        <div class="category-number">99</div>
+    </div>
+
+    <h3 class="category-title">
+        Landing & Custom
+
+        <button class="copy-btn" data-copy="Landing & Custom">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Landing Pages</span>
+            <button class="item-copy" data-copy="Landing Pages">📋</button>
+        </li>
+
+        <li><span class="category-name">Custom Website</span>
+            <button class="item-copy" data-copy="Custom Website">📋</button>
+        </li>
+
+        <li><span class="category-name">Special Project</span>
+            <button class="item-copy" data-copy="Special Project">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
+
+
+<!-- =====================================================
+     CARD 15
+     ===================================================== -->
+
+<article class="category-card"
+data-search="other custom special projects">
+
+    <div class="category-top">
+        <div class="category-icon">📦</div>
+        <div class="category-number">100</div>
+    </div>
+
+    <h3 class="category-title">
+        Other & Custom
+
+        <button class="copy-btn" data-copy="Other & Custom">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="11" height="11" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+        </button>
+    </h3>
+
+    <ul class="category-list">
+
+        <li><span class="category-name">Other</span>
+            <button class="item-copy" data-copy="Other">📋</button>
+        </li>
+
+        <li><span class="category-name">Custom Projects</span>
+            <button class="item-copy" data-copy="Custom Projects">📋</button>
+        </li>
+
+        <li><span class="category-name">Special Websites</span>
+            <button class="item-copy" data-copy="Special Websites">📋</button>
+        </li>
+
+    </ul>
+
+    <a href="#" class="view-all">View All →</a>
+
+</article>
 
 
     </div>
@@ -1078,6 +1902,21 @@ body{
 
 
 <!-- =======================================================
+     COPY TOAST
+     ======================================================= -->
+
+<div class="copy-toast" id="copyToast">
+
+    <span class="toast-check">✓</span>
+
+    <span id="toastText">
+        Copied!
+    </span>
+
+</div>
+
+
+<!-- =======================================================
      FOOTER
      ======================================================= -->
 
@@ -1086,6 +1925,7 @@ body{
     <div class="footer-inner">
 
         <div>
+
             <div class="footer-logo">
                 Website<span>Deals</span>.com
             </div>
@@ -1093,14 +1933,17 @@ body{
             <p>
                 Buy Ready-Made Websites. Launch Faster.
             </p>
+
         </div>
 
         <div class="footer-links">
+
             <a href="#">About</a>
-            <a href="#">All Websites</a>
-            <a href="#">Categories</a>
+            <a href="#categories">All Websites</a>
+            <a href="#categories">Categories</a>
             <a href="#">Sell Your Website</a>
             <a href="#">Contact</a>
+
         </div>
 
     </div>
@@ -1111,12 +1954,17 @@ body{
 <script>
 /* =========================================================
    WebsiteDeals.com
-   Category Search
+   Search + Click-to-Copy
    ========================================================= */
 
 (function(){
 
     "use strict";
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
 
     const searchInput =
         document.getElementById("categorySearch");
@@ -1152,6 +2000,7 @@ body{
                     card.dataset.search
                 ).toLowerCase();
 
+
             const matched =
                 keyword === "" ||
                 text.includes(keyword);
@@ -1185,6 +2034,230 @@ body{
     searchInput.addEventListener(
         "input",
         searchCategories
+    );
+
+
+    /* =====================================================
+       COPY SYSTEM
+       ===================================================== */
+
+    const toast =
+        document.getElementById("copyToast");
+
+    const toastText =
+        document.getElementById("toastText");
+
+    let toastTimer = null;
+
+
+    async function copyText(text, button){
+
+        try{
+
+            /*
+             * Modern Clipboard API
+             */
+
+            if(
+                navigator.clipboard &&
+                window.isSecureContext
+            ){
+
+                await navigator.clipboard.writeText(text);
+
+            }else{
+
+                /*
+                 * Fallback for local/static pages
+                 */
+
+                const textarea =
+                    document.createElement("textarea");
+
+                textarea.value = text;
+
+                textarea.style.position = "fixed";
+                textarea.style.opacity = "0";
+
+                document.body.appendChild(textarea);
+
+                textarea.focus();
+                textarea.select();
+
+                document.execCommand("copy");
+
+                textarea.remove();
+
+            }
+
+
+            showCopied(button, text);
+
+
+        }catch(error){
+
+            console.error(
+                "Copy failed:",
+                error
+            );
+
+        }
+
+    }
+
+
+    function showCopied(button, text){
+
+        /*
+         * Reset previous buttons
+         */
+
+        document
+            .querySelectorAll(".copy-btn.copied, .item-copy.copied")
+            .forEach(function(btn){
+
+                btn.classList.remove("copied");
+
+                if(btn.classList.contains("copy-btn")){
+
+                    btn.innerHTML = `
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2">
+                            <rect x="9" y="9"
+                                  width="11"
+                                  height="11"
+                                  rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                    `;
+
+                }else{
+
+                    btn.textContent = "📋";
+
+                }
+
+            });
+
+
+        button.classList.add("copied");
+
+
+        /*
+         * Show check icon
+         */
+
+        if(button.classList.contains("copy-btn")){
+
+            button.innerHTML = `
+                <svg viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2.5">
+                    <path d="M5 12l4 4L19 6"/>
+                </svg>
+            `;
+
+        }else{
+
+            button.textContent = "✓";
+
+        }
+
+
+        /*
+         * Toast
+         */
+
+        toastText.textContent =
+            "Copied! " + text;
+
+        toast.classList.add("show");
+
+
+        clearTimeout(toastTimer);
+
+
+        toastTimer =
+            setTimeout(function(){
+
+                toast.classList.remove("show");
+
+            },2200);
+
+
+        /*
+         * Reset button
+         */
+
+        setTimeout(function(){
+
+            button.classList.remove("copied");
+
+            if(button.classList.contains("copy-btn")){
+
+                button.innerHTML = `
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <rect x="9" y="9"
+                              width="11"
+                              height="11"
+                              rx="2"/>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                    </svg>
+                `;
+
+            }else{
+
+                button.textContent = "📋";
+
+            }
+
+        },2200);
+
+    }
+
+
+    /*
+     * All copy buttons
+     */
+
+    document.addEventListener(
+        "click",
+        function(event){
+
+            const button =
+                event.target.closest(
+                    ".copy-btn, .item-copy"
+                );
+
+
+            if(!button){
+                return;
+            }
+
+
+            const text =
+                button.dataset.copy;
+
+
+            if(!text){
+                return;
+            }
+
+
+            event.preventDefault();
+
+            copyText(
+                text,
+                button
+            );
+
+        }
     );
 
 
